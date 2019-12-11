@@ -21,7 +21,8 @@ class CalculatorImpl : CalculateInterface {
 
     override fun operatorClicked(getText: String) {
         if (mAnswer != "") {
-            sCalculation += "\n" + getText
+//            sCalculation += "\n" + getText
+            sCalculation += getText
             number = ""
             numbers1 = 0.0
             numbers2 = 0.0
@@ -44,7 +45,7 @@ class CalculatorImpl : CalculateInterface {
             "+" -> temp = mResult + numbers1
             "*" -> temp = mResult * numbers1
             "/" -> try { // divided by 0 cause execption {
-                temp = mResult / numbers2.pow(numbers1)
+                temp = mResult / numbers1
             } catch (e: Exception) {
                 mAnswer = e.message.toString()
             }

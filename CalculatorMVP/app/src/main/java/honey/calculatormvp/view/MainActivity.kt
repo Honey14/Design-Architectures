@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity(), ViewInterface {
         calculatorImpl = CalculatorImpl()
         calculatorImpl.setView(this)
 //        textCalculation.movementMethod = ScrollingMovementMethod()
-//        textCalculation.text = "0 \n 2 \n 4 \n 5 \n 6 \n 7"
         textDel.setOnClickListener(View.OnClickListener {
             calculatorImpl.clearAll() // after clearnig vars, we have to
         })
