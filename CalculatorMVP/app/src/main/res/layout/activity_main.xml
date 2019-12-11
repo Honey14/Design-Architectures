@@ -16,11 +16,10 @@
             android:id="@+id/textCalculation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:gravity="end|bottom"
             android:layout_margin="10dp"
             android:text="0"
-            android:scrollbars="vertical"
+            android:scrollbars="horizontal"
             android:textColor="@android:color/white"
             android:textSize="22sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -154,7 +153,7 @@
             android:background="@drawable/bg_blue"
             android:onClick="onClickedOperator"
             android:padding="30dp"
-            android:text="X"
+            android:text="*"
             android:textSize="16sp"
             android:textStyle="bold" />
 

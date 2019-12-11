@@ -26,6 +26,7 @@ class CalculatorImpl : CalculateInterface {
             numbers1 = 0.0
             numbers2 = 0.0
             mResult = temp
+            temp = 0.0
             mAnswer = format.format(mResult).toString()
             currentOperator = getText
             view.updateUI(sCalculation, mAnswer)
@@ -39,9 +40,9 @@ class CalculatorImpl : CalculateInterface {
         number += getText
         numbers1 = java.lang.Double.parseDouble(number)
         when (currentOperator) {
-            "" -> temp = mResult + numbers2.pow(numbers1)
-            "+" -> temp = mResult + numbers2.pow(numbers1)
-            "x" -> temp = mResult * numbers2.pow(numbers1)
+            "" -> temp = mResult + numbers1
+            "+" -> temp = mResult + numbers1
+            "*" -> temp = mResult * numbers1
             "/" -> try { // divided by 0 cause execption {
                 temp = mResult / numbers2.pow(numbers1)
             } catch (e: Exception) {
