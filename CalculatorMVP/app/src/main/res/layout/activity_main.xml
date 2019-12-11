@@ -6,18 +6,39 @@
     android:background="@color/background"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textTotal"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="20dp"
         android:background="@color/text_total_color"
-        android:gravity="end"
-        android:padding="55dp"
-        android:text="0"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textCalculation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="end|bottom"
+            android:layout_margin="10dp"
+            android:text="0"
+            android:scrollbars="vertical"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="end"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -35,6 +56,7 @@
             android:background="@drawable/bg_color"
             android:padding="30dp"
             android:text="7"
+            android:onClick="onClickedNumber"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -45,6 +67,7 @@
             android:layout_margin="5dp"
             android:layout_toEndOf="@+id/text7"
             android:background="@drawable/bg_color"
+            android:onClick="onClickedNumber"
             android:padding="30dp"
             android:text="8"
             android:textSize="16sp"
@@ -58,6 +81,7 @@
             android:layout_toEndOf="@+id/text8"
             android:background="@drawable/bg_color"
             android:padding="30dp"
+            android:onClick="onClickedNumber"
             android:text="9"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -69,6 +93,7 @@
             android:layout_margin="5dp"
             android:layout_toEndOf="@+id/text9"
             android:background="@drawable/bg_blue"
+            android:onClick="onClickedOperator"
             android:paddingStart="32dp"
             android:paddingTop="30dp"
             android:paddingEnd="32dp"
@@ -85,6 +110,7 @@
             android:layout_below="@+id/text7"
             android:layout_margin="5dp"
             android:background="@drawable/bg_color"
+            android:onClick="onClickedNumber"
             android:padding="30dp"
             android:text="4"
             android:textSize="16sp"
@@ -98,6 +124,7 @@
             android:layout_margin="5dp"
             android:layout_toEndOf="@+id/text4"
             android:background="@drawable/bg_color"
+            android:onClick="onClickedNumber"
             android:padding="30dp"
             android:text="5"
             android:textSize="16sp"
@@ -111,6 +138,7 @@
             android:layout_margin="5dp"
             android:layout_toEndOf="@+id/text5"
             android:background="@drawable/bg_color"
+            android:onClick="onClickedNumber"
             android:padding="30dp"
             android:text="6"
             android:textSize="16sp"
@@ -124,6 +152,7 @@
             android:layout_margin="5dp"
             android:layout_toEndOf="@+id/text6"
             android:background="@drawable/bg_blue"
+            android:onClick="onClickedOperator"
             android:padding="30dp"
             android:text="X"
             android:textSize="16sp"
@@ -135,6 +164,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/text4"
             android:layout_margin="5dp"
+            android:onClick="onClickedNumber"
             android:background="@drawable/bg_color"
             android:padding="30dp"
             android:text="1"
@@ -149,6 +179,7 @@
             android:layout_margin="5dp"
             android:layout_toEndOf="@+id/text1"
             android:background="@drawable/bg_color"
+            android:onClick="onClickedNumber"
             android:padding="30dp"
             android:text="2"
             android:textSize="16sp"
@@ -162,6 +193,7 @@
             android:layout_margin="5dp"
             android:layout_toEndOf="@+id/text2"
             android:background="@drawable/bg_color"
+            android:onClick="onClickedNumber"
             android:padding="30dp"
             android:text="3"
             android:textSize="16sp"
@@ -174,6 +206,7 @@
             android:layout_below="@+id/text6"
             android:layout_margin="5dp"
             android:layout_toEndOf="@+id/text3"
+            android:onClick="onClickedOperator"
             android:background="@drawable/bg_blue"
             android:padding="30dp"
             android:text="+"
@@ -203,6 +236,7 @@
             android:layout_margin="5dp"
             android:layout_toEndOf="@+id/textdot"
             android:background="@drawable/bg_color"
+            android:onClick="onClickedNumber"
             android:padding="30dp"
             android:text="0"
             android:textSize="16sp"
